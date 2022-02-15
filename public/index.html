@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Auto Answerer</title>
+</head>
+
+<body>
+    <header>
+        <h1>Auto Answerer</h1>
+        <button id="reset-button">Reset</button>
+    </header>
+    <hr />
+    <main>
+        <div class="cols">
+            <h2>Setup</h2>
+            <form onsubmit="event.preventDefault(); submitUrl();">
+                <label>Webpage URL</label>
+                <input id="webpageUrl" type="text" placeholder="Enter webpage URL">
+                <label>Selector</label>
+                <input id="selector" type="text" placeholder="Default - p a">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <h3 id="page-heading">Page Heading</h3>
+                <h4>No. of words found : <span id="wordCount">0</span></h4>
+                <button id="selectAllButton">Select all</button>
+                <button id="deselectAllButton">Deselect all</button>
+                <button id="addToQueueButton">Add to Queue</button>
+                <p>Queue update status : <span id="queueUpdateStatus" class="red">Not Updated</span></p>
+                <ol id="wordslist"></ol>
+            </div>
+        </div>
+        <div class="cols">
+            <h2>Execute</h2>
+            <hr />
+            <div class="slider-container">
+                <button id="slider-reset-button">Reset</button>
+                <p>Pre execute wait (seconds)</p>
+                <input type="range" min="0" max="30" value="0" class="slider" id="preExeWaitSlider">
+                <label id="preExeWaitLabel">0</label>
+                <p>Delay between requests (milliseconds)</p>
+                <input type="range" min="0" max="6000" value="0" step="50" class="slider" id="reqDelaySlider">
+                <label id="reqDelayLabel">0</label>
+            </div>
+            <hr />
+            <button id="play-button">Play</button>
+            <button id="pause-button">Pause</button>
+            <button id="stop-button">Stop</button>
+            <div id="execution-info-container">
+                <p>Execution will start in <span class="bold" id="exe-timer">0</span></p>
+                <p>Time remaining : <span class="bold" id="time-remaining">0</span></p>
+                <p>Tried : [<span class="bold" id="tried-count"></span>]</p>
+            </div>
+            <h3>Queue</h3>
+            <table style="width:100%">
+
+            </table>
+        </div>
+    </main>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

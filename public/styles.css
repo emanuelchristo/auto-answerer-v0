@@ -1,0 +1,68 @@
+body {
+    margin: 20px;
+}
+
+main {
+    display: flex;
+}
+
+main .cols {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+input {
+    margin-top: 5px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #aaa;
+    text-align: left;
+    padding: 3px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+button {
+    margin: 2px 0;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.slider-container {
+    padding-bottom: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.pending {
+    background-color: red;
+}
+
+.trying {
+    background-color: yellow;
+}
+
+.tried {
+    background-color: green;
+}

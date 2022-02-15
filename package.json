@@ -1,0 +1,22 @@
+{
+	"name": "autoans",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "nodemon server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"array-unique": "^0.3.2",
+		"axios": "^0.25.0",
+		"delay": "^4.4.0",
+		"express": "^4.17.1",
+		"jsdom": "^16.4.0",
+		"replace-special-characters": "^1.2.5",
+		"request-promise": "^4.2.6",
+		"robotjs": "^0.6.0"
+	}
+}
